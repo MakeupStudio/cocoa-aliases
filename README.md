@@ -11,22 +11,18 @@ So you can replace this
 import UIKit
 
 extension UIView {
-  
-    func roundCorners(by value: CGFloat) {
-        layer.cornerRadius = value
-    }
-  
+  func roundCorners(by value: CGFloat) {
+    layer.cornerRadius = value
+  }
 }
 
 #elseif os(OSX)
 import AppKit // or Cocoa
 
 extension NSView {
-  
-    func roundCorners(by value: CGFloat) {
-        layer.cornerRadius = value
-    }
-  
+  func roundCorners(by value: CGFloat) {
+    layer.cornerRadius = value
+  }
 }
 
 #endif
@@ -36,14 +32,11 @@ with this
 
 ```swift
 import CocoaAlises
-import CoreGraphics
 
 extension CocoaView {
-  
-    func roundCorners(by value: CGFloat) {
-        layer.cornerRadius = value
-    }
-  
+  func roundCorners(by value: CGFloat) {
+    layer.cornerRadius = value
+  }
 }
 ```
 
