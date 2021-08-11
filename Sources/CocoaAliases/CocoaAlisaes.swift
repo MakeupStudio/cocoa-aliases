@@ -1,6 +1,4 @@
-#if canImport(SwiftUI)
-@_exported import SwiftUI
-#elseif canImport(UIKit)
+#if canImport(UIKit)
 @_exported import UIKit
 #elseif canImport(AppKit)
 @_exported import AppKit
@@ -107,6 +105,8 @@ public typealias CocoaWindow                                          = UIWindow
 #endif
 
 #if os(iOS) && canImport(SwiftUI)
+import SwiftUI
+
 @available(iOS 13.0, tvOS 13.0, *)
 @available(macOS, unavailable)
 @available(watchOS, unavailable)
@@ -153,6 +153,8 @@ extension CocoaViewControllerRepresentable {
   }
 }
 #elseif os(macOS) && canImport(SwiftUI)
+import SwiftUI
+
 @available(macOS 10.15, *)
 @available(iOS, unavailable)
 @available(tvOS, unavailable)
